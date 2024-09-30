@@ -1,0 +1,345 @@
+
+
+    body {
+        font-family: "Poppins", sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-image: url(img/bg.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        
+    }
+    #container-menu{
+        background-color: rgb(19, 19, 19);
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        max-width: 250px;
+        height: 100%;
+    
+    }
+    
+    
+    
+    nav{
+        transform: translateY(30%);
+    }
+    
+    nav a{
+        
+        display: block;
+        text-decoration: none;
+        color: white;
+        padding: 30px;
+        top: 50%;
+        text-transform: uppercase;
+        font-size: 16px;
+    }
+    
+    
+    
+    nav a:hover{
+        background-color: black;
+        border-left: 5px solid white;
+    }
+
+    #img-icon{
+        width: 600px;
+        margin-left: 250px;
+    }
+    
+    label{
+        display: none;
+    }
+    
+    #btn-menu{
+        display: none;
+    }
+
+    
+    
+    #dashboard{
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        width: 800px;
+        box-shadow: 0 0 20px rgba(0, 0, 1, 5.0);
+        background-color: #ffffff;
+        border-radius: 15px;
+        text-align: center;
+        margin-left: 150px;
+    }
+    
+    #dashboard h2{
+        margin-bottom: 0px;
+        text-transform: uppercase;
+    }
+    
+    #dashboard h3{
+        margin-bottom: 10px;
+    }
+
+    .btn{
+        padding: 10px;
+        border-radius:10px;
+        border-style:double;
+        
+        border-color: #cfcfcf;
+    }
+
+    .btn:hover{
+        background-color: #e0e0e0;
+    }
+    
+    .btn-1{
+        padding: 5px 5px 3px 5px;
+        border-radius:10px;
+        border-style:double;
+        margin-left: 90%;
+        border-color: #cfcfcf;
+    }
+    
+    .btn-1:hover{
+        background-color: #e0e0e0;
+    }
+
+        #dashboard-content{
+            padding: 20px;
+            border-radius: 20px;
+            padding-top: 13px;
+            background-color: #e0e0e0;
+            position: absolute;
+            left: 42%;
+            top: 40%;
+        }
+
+    
+        
+
+        img{
+            width: 25px;
+        }
+
+        #dashboard-content input{
+            padding: 10px;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            
+            
+            
+        }
+        
+        input{
+            margin: 10px;
+            padding: 5px;
+            border-radius: 10px;
+            border-style: double;
+        }
+        #cerrar{
+            margin-left: 0;
+        }
+      
+    
+    .btn-2{
+        margin: 0 120px 0 120px;
+        padding: 10px;
+        border-radius: 15px;
+        border-style:double;
+        border-color: #868686;
+    }
+    
+    .btn-2:hover{
+        background-color: #d8d8d8;
+    }
+
+    #parkingStatus{
+        display: flex;
+        flex-direction: column;
+    }
+
+    
+    #parkingStatus h3{
+        font-size: 25px;
+        margin-top: 80px;
+        margin-bottom: 40px;
+        text-transform: uppercase;
+
+    }
+
+    table{
+       align-items: center;
+       border-collapse: collapse;
+    }
+
+    thead {
+        background-color: rgb(34, 34, 34);
+    }
+
+    th{
+        padding: 10px;
+        color: white;
+    }
+
+    td{
+        padding: 10px;
+    }
+
+    tr:hover td{
+        background-color: #e0e0e0;
+    }
+
+    td img{
+        margin: 0 10px 0 10px;
+    }
+
+    td button{
+        margin: 0 10px 0 10px;
+        padding: 0px;
+    }
+
+    td button:hover{
+        background-color: #c7c7c7;
+        border-color: #868686;
+        border-style: double;
+     }
+    
+    @media (max-width: 1000px) {
+
+        #dashboard{
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            width: 420px;
+            box-shadow: 0 0 20px rgba(0, 0, 1, 5.0);
+            background-color: #ffffff;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 30%;
+            margin-left: 10px;
+        }
+
+        #dashboard-content{
+            padding: 20px;
+            border-radius: 20px;
+            padding-top: 13px;
+            background-color: #e0e0e0;
+            position: absolute;
+            left: 70px;
+            top: 140px
+        }
+    
+    
+
+    img{
+        width: 25px;
+    }
+
+    #dashboard-content input{
+        padding: 10px;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    input{
+        margin: 10px;                               
+        padding: 5px;
+        border-radius: 10px;
+        border-style: double;
+    }
+    #cerrar{
+        
+        margin-left: 0;
+    }
+
+    table{
+        align-items: center;
+        border-collapse: collapse;
+     }
+ 
+     thead {
+         background-color: rgb(34, 34, 34);
+     }
+ 
+     th{
+        
+         padding: 10px;
+         color: rgb(255, 255, 255);
+     }
+
+     
+     td{
+         padding: 10px;
+     }
+ 
+     tr:hover td{
+         background-color: #e0e0e0;
+     }
+
+     td img{
+        margin: 0;
+     }
+
+     td button:hover{
+        background-color: #c7c7c7;
+        border-color: #868686;
+        border-style: double;
+     }
+
+     td button{
+        padding: 3px;
+        margin-top: 2px;
+     }
+
+     td:nth-child(2), th:nth-child(2) {
+        display: none;
+      }
+
+      #container-menu{
+        display: block;
+        height: 0px
+    }
+
+      #navbar{
+        margin-top: 20px;
+        display: none;
+        position: absolute;
+        background-color: black;
+    }
+
+
+      .img-icon{
+        width: 300px;
+        margin-left: 25px;
+    }
+
+    label{
+        display: block;
+        position: absolute;
+        top: 0;
+    }
+
+    .img-icon{
+        width: 60px;
+        margin-top: 10px;
+    }
+
+    #btn-menu{
+        display: none;
+    }
+
+    #btn-menu:checked ~ #navbar{
+       display: block;
+    }
+
+    
+    }

@@ -1,0 +1,15 @@
+{
+  "name": "proyecto-parqueadero",
+  "version": "1.0.0",
+  "description": "Backend para la administración de parqueaderos",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.0.0",
+    "dotenv": "^16.0.0",
+    "cors": "^2.8.5"
+  }
+}

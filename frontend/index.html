@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,39 +9,14 @@
 </head>
 <body>
     <div id="login">
-        <h2>Login</h2>
+        <h2>Inicio de sesión</h2>
         <input type="text" id="username" placeholder="Usuario">
         <input type="password" id="password" placeholder="Contraseña">
-        <button onclick="login()">Ingresar</button>
+        <a href="home.html"><button onclick="login()">Ingresar</button></a>
     </div>
 
-    <div id="dashboard" style="display:none;">
-        <h2>Panel de Control</h2>
-        <div>
-            <h3>Registrar Apartamento</h3>
-            <form id="apartmentForm">
-                <input type="text" id="apartmentNumber" placeholder="Número de Apartamento">
-                <input type="text" id="residentName" placeholder="Nombre del Residente">
-                <button type="button" onclick="addApartment()">Agregar Apartamento</button>
-            </form>
-        </div>
-
-        <div id="parkingStatus">
-            <h3>Estado de Parqueaderos</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th># Parqueadero</th>
-                        <th>Asignado</th>
-                        <th>Estado</th>
-                    </tr>
-                </thead>
-                <tbody id="parkingTable">
-                    <!-- Aquí se llenarán los datos desde JavaScript -->
-                </tbody>
-            </table>
-        </div>
-    </div>
+    
+    
 
     <script src="script.js"></script>
 </body>

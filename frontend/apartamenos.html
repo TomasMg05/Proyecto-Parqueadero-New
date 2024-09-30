@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+    
+</head>
+<body>
+    <script src="script.js"></script>
+    <div id="container-menu">
+       
+        <input type="checkbox" id="btn-menu"/>
+        <label for="btn-menu" class="icon-menu"><img src="img/menu.png" alt="" class="img-icon"></label>
+   
+    <nav id="navbar" >
+        <a href="home.html">Inicio</a>
+        
+        <a href="#">Lista parqueaderos</a>
+        <a href="trabajadores.html">Lista trabajadores</a>
+    </nav>
+</div>
+    <div id="dashboard">
+        <h2>Panel de Control</h2>
+        <div >
+            <h3>Registrar Apartamento</h3>
+            <button type="button" class="btn" onclick="abrir()">Agregar Apartamento</button>
+            <div id="dashboard-content" style="display: none;">
+            <form id="apartmentForm">
+                <div id="cerrar"><button type="button" class="btn-1" onclick="cerrar()"><img src="img/error.png" alt=""></button></div>
+                
+                <input type="text" id="apartmentNumber" placeholder="Número de Apartamento">
+                <input type="text" id="residentName" placeholder="Nombre del Residente">
+                <button type="button" class="btn-2" onclick="alert('Apartamento Registrado')" >Agregar </button>
+            </form>
+            </div>
+            
+    </div>
+
+    <div >
+                
+        <div id="dashboard-content" style="display: none;">
+        <form id="apartmentForm">
+            <div id="cerrar"><button type="button" class="btn-1" onclick="cerrar()"><img src="img/error.png" alt=""></button></div>
+            
+            <input type="text" id="apartmentNumber" placeholder="Número de Apartamento">
+            <input type="text" id="residentName" placeholder="Nombre del Residente">
+            <button type="button" class="btn-2" onclick="alert('Apartamento Registrado')" >Editar </button>
+        </form>
+        </div>
+
+        <div id="parkingStatus">
+            <h3>Estado de Parqueaderos</h3>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Aparatamento</th>
+                        <th id="residente">Residente</th>
+                        <th id="parqueadero"># Parqueadero</th>
+                        <th>Estado</th>
+                        <th>Editar</th>
+                        
+                    </tr>
+                </thead>
+                <tbody id="parkingTable">
+                    <tr>
+                        <td>10-301</td>
+                        <td >Jose</td>
+                        <td>1</td>
+                        <td><img src="img/controlar.png" alt=""></td>
+                        <td id="botones"><button type="button" onclick="abrir()"><img src="img/editar.png"></button>
+                            <button type="button"> <img src="img/basura.png"></button></td>
+                    </tr>
+                    <tr id="fila">
+                        <td>10-601</td>
+                        <td>Luis</td>
+                        <td>2</td>
+                        <td><img src="img/controlar.png" alt=""></td>
+                        <td id="botones"><button type="button" onclick="abrir()"><img src="img/editar.png"></button>
+                            <button type="button" onclick="eliminar()"> <img src="img/basura.png"></button></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

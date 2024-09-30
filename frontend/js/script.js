@@ -1,3 +1,4 @@
+
 function login() {
     const username = document.getElementById('username').value;
     const password = document.getElementById('password').value;
@@ -34,4 +35,16 @@ function addApartment() {
             alert('Apartamento agregado con éxito');
         }
     });
+}
+
+function cerrar(){
+    document.getElementById("dashboard-content").style.display="none";
+}
+
+function abrir(){
+    document.getElementById("dashboard-content").style.display="block";
+}
+
+function eliminar(){
+    document.getElementById("fila").style.display="none";
 }

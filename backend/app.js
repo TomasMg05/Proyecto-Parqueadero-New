@@ -1,21 +1,42 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const path = require('path');
+require('dotenv').config();
+
+const apartmentsRouter = require('./routes/apartments');
+const parkingsRouter = require('./routes/parkings');
+const usersRouter = require('./routes/users');
+
 const app = express();
-app.use(express.json());
+const PORT = process.env.PORT || 3000;
+
+// Middleware
 app.use(cors());
+app.use(express.json());
 
-// Rutas
-const apartmentRoutes = require('./routes/apartments');
-const userRoutes = require('./routes/users');
+// Rutas del API
+app.use('/api/apartments', apartmentsRouter);
+app.use('/api/parkings', parkingsRouter);
+app.use('/api/users', usersRouter);
 
-app.use('/api/apartments', apartmentRoutes);
-app.use('/api/users', userRoutes);
+// Conexión a la base de datos
+mongoose.connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})
+.then(() => console.log('Conectado a MongoDB'))
+.catch((err) => console.error('No se pudo conectar a MongoDB:', err));
 
-mongoose.connect('mongodb+srv://<usuario>:<contraseña>@<cluster>.mongodb.net/parking_admin', { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => console.log('Conectado a MongoDB'))
-    .catch((err) => console.error('No se pudo conectar a MongoDB:', err));
+// Sirve los archivos estáticos del frontend
+app.use(express.static(path.join(__dirname, '../frontend')));
 
-app.listen(3000, () => {
-    console.log('Servidor escuchando en puerto 3000');
+// Ruta principal para devolver el archivo HTML principal
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../frontend/index.html'));
+});
+
+// Inicio del servidor
+app.listen(PORT, () => {
+    console.log(`Servidor escuchando en puerto ${PORT}`);
 });

@@ -1,0 +1,158 @@
+body {
+    font-family: "Poppins", sans-serif;
+    
+    height: 95vh;
+    background-image: url(img/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    
+}
+
+#container-menu{
+    background-color: rgb(19, 19, 19);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    max-width: 250px;
+    height: 100vh;
+
+}
+
+
+
+nav{
+    transform: translateY(30%);
+}
+
+nav a{
+    
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 30px;
+    top: 50%;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+
+
+nav a:hover{
+    background-color: black;
+    border-left: 5px solid white;
+}
+
+#container-content{
+    margin-left: 250px;
+    
+}
+
+#bloques{
+    display: flex;
+   
+    justify-content: space-between; 
+    
+}
+
+#bloques-contenido{
+    box-shadow: 0 0 20px rgba(0, 0, 1, 5.0);
+        background-color: #ffffff;
+        border-radius: 15px;
+    width: 100%;
+    text-align: center;
+    max-width: 350px;
+    margin: 30px;
+    padding: 0 10px;
+    border-radius: 20px;
+    align-items: center;
+    
+}
+
+
+
+#bloques-contenido h1{
+    text-transform: uppercase;
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+}
+
+#bloques-contenido h2{
+    color: rgb(0, 0, 0);
+    font-size: 40px;
+}
+
+img{
+    width: 600px;
+    margin-left: 250px;
+}
+
+label{
+    display: none;
+}
+
+#btn-menu{
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    body {
+        font-family: "Poppins", sans-serif;
+        
+        height: 100%;
+        background-image: url(bg.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        
+    }
+    #container-menu{
+        display: block;
+        height: 0px
+    }
+
+    #navbar{
+        margin-top: 40px;
+        display: none;
+        position: absolute;
+        background-color: black;
+    }
+
+    #container-content{
+        margin-top: 60px;
+        margin-left: 25px;
+    }
+
+    #bloques{
+        display: flex;
+        flex-direction: column;
+    }
+
+    img{
+        width: 400px;
+        margin-left: 22px;
+    }
+
+    label{
+        display: block;
+        position: absolute;
+        top: 0;
+    }
+
+    .img-icon{
+        width: 60px;
+        margin-top: 10px;
+    }
+
+    #btn-menu{
+        display: none;
+    }
+
+    #btn-menu:checked ~ #navbar{
+       display: block;
+    }
+
+
+}
